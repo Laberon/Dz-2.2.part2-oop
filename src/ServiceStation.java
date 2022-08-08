@@ -1,46 +1,39 @@
 public class ServiceStation implements ServiceStationPrint {
     @Override
-    public void check(Car[] car, Bicycle[] bicycle, Truck[] truck) {
-        if (car != null) {
-            printModel(car);
-            for (int i = 0; i < car.length; i++) {
-                updateTyre();
-            }
+    public void check(Transport[] transport) {
+        for (int i = 0; i < transport.length; i++) {
+            Transport transports = transport[i];
+        if (transports.getWheelsCount() == 4) {
+            System.out.println(transports.getModelName());
+            updateTyre();
             checkEngine();
-            System.out.println();
-        } else if (truck != null) {
-            printModel(truck);
-            for (int i = 0; i < truck.length; i++) {
-                updateTyre();
-            }
+        } else if (transports.getWheelsCount() == 2) {
+            System.out.println(transports.getModelName());
+            updateTyre();
+        } else if (transports.getWheelsCount()>=4) {
+            System.out.println(transports.getModelName());
+            updateTyre();
             checkEngine();
             checkTrailer();
-            System.out.println();
-        } else if (bicycle != null) {
-            printModel(bicycle);
-            for (int i = 0; i < bicycle.length; i++) {
-                updateTyre();
-            }
-            System.out.println();
+        } else if (transports.getWheelsCount() <= 1) {
+            System.out.println(transports.getModelName());
+            System.out.println("Проверьте колличество колес");
         }
+    }}
+    @Override
+    public void updateTyre() {
+        System.out.println("Меняем покрышки");
     }
     @Override
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
     @Override
-    public void updateTyre() {
-        System.out.println("Меняем покрышки");
-    }
-    @Override
     public void checkTrailer() {
-        System.out.println("Проверяем прицепы");
+        System.out.println("Проверяем прицеп");
     }
 
-    private void printModel(Transport[] transports) {
-        for (int i = 0; i < transports.length; i++) {
-            Transport transport = transports[i];
-            System.out.println(transport.getModelName());
-        }
+    public void printSeparator() {
+        System.out.println("”””””””””””””””””");
     }
 }

@@ -1,9 +1,11 @@
 public interface ServiceStationPrint {
-    void check(Car[] car, Bicycle[] bicycle, Truck[] truck);
+//    void check(Transport transport);
 
-    void checkEngine();
+    void check(Transport[] transport);
 
     void updateTyre();
+
+    void checkEngine();
 
     void checkTrailer();
 

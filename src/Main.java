@@ -1,24 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car("car 1",4);
-        Car car2 = new Car("car 2",4);
 
-        Car[] cars=new Car[]{
-                new Car("car 1",4),
-                new Car("car 2",4),
+        Transport[] car = new Transport[]{
+                new Transport("car 1", 4),
+                new Transport("car 2", 4),
+                new Transport("car 3", 1),
         };
-        Truck[] trucks=new Truck[]{
-                new Truck("truck 1",6),
-                new Truck("truck 2",8),
+        Transport[] truck = new Transport[]{
+                new Transport("truck 1", 6),
+                new Transport("truck 2", 8),
+                new Transport("truck 3", 1),
         };
-        Bicycle[] bicycles=new Bicycle[]{
-                new Bicycle("bicycle 1",2),
-                new Bicycle("bicycle 2",2),
+        Transport[] bicycle = new Transport[]{
+                new Transport("bicycle 1", 2),
+                new Transport("bicycle 2", 2),
+                new Transport("bicycle 3",1)
         };
-
         ServiceStationPrint station = new ServiceStation();
-        station.check(cars,null,null);
-        station.check(null,bicycles,null);
-        station.check(null,null,trucks);
+        station.check(car);
+        station.check(truck);
+        station.check(bicycle);
     }
 }

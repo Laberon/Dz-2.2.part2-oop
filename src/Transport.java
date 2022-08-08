@@ -1,10 +1,27 @@
 public class Transport {
     private String modelName;
+
     private int wheelsCount;
 
     public Transport(String modelName, int wheelsCount) {
         this.modelName = modelName;
         this.wheelsCount = wheelsCount;
+//        if (wheelsCount == 4) {
+//            System.out.println(getModelName());
+//            updateTyre();
+//            checkEngine();
+//        } else if (wheelsCount == 2) {
+//            System.out.println(getModelName());
+//            updateTyre();
+//        } else if (wheelsCount>=4) {
+//            System.out.println(getModelName());
+//            updateTyre();
+//            checkEngine();
+//            checkTrailer();
+//        } else if (wheelsCount <= 1) {
+//            System.out.println(getModelName());
+//            System.out.println("Проверьте колеса");
+//        }
     }
 
     public String getModelName() {
@@ -14,7 +31,6 @@ public class Transport {
     public int getWheelsCount() {
         return wheelsCount;
     }
-
     public void setModelName(String modelName) {
         this.modelName = modelName;
     }
