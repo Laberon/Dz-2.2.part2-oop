@@ -10,20 +10,11 @@ public class Transport {
     public String getModelName() {
         return modelName;
     }
-    public int getWheelsCount() {
-        return wheelsCount;
-    }
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
-    }
     public void updateTyre() {
         if (wheelsCount >= 2) {
-            System.out.println("Меняем покрышки "+getWheelsCount()+" шт");
+            System.out.println("Меняем покрышки "+wheelsCount+" шт");
         } else if (wheelsCount < 2) {
-            System.out.println("Проверь колеса");
+            System.out.println("Проверь колличество колес");
         }
     }
     public void checkEngine() {
